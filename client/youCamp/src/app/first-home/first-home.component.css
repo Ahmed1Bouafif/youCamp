@@ -44,6 +44,32 @@ body{
       text-decoration: none;
       color: #ffffff ;
   }
+  #start2{
+    background: #023000;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+  color: #023000;
+  position: absolute;
+  top:530px;
+  left:480px;
+  width: 530px;
+  height: 70px;
+  font-size: xx-large;
+  font-family:'Times New Roman', Times, serif;
+  padding-bottom: 65px;
+}
+#start:hover,
+#start:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em;
+    transform: translateY(-0.25em);
+  }
+  a , a:active , a:focus , a:link , a:visited {
+      text-decoration: none;
+      color: #ffffff ;
+  }
 
 
 img{
@@ -69,6 +95,9 @@ h3{
     
 }
 #page2{
+    background-image: url(https://ak.picdn.net/shutterstock/videos/11812844/thumb/1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 100vh;
     width: 98.89vw;
     display: flex;

@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { FirstHomeComponent } from './first-home/first-home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FirstHomeComponent } from './first-home/first-home.component';
 
+
+
+// import { HttpClientModule } from '@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,7 +14,8 @@ import { FirstHomeComponent } from './first-home/first-home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    // HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
