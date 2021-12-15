@@ -1,0 +1,86 @@
+
+body{
+    height: 300vh;
+    width: 98.89vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+#page1{
+    height: 100vh;
+    width: 98.89vw;
+    background-image: url(https://wallpaperaccess.com/full/6953934.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#logo{
+    top:0;
+    left:0;
+    width: 330px;
+    height: 290px;
+}
+#start{
+    background: #023000;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+  color: #023000;
+  position: absolute;
+  top:530px;
+  left:480px;
+  width: 530px;
+  height: 70px;
+  font-size: xx-large;
+  font-family:'Times New Roman', Times, serif;
+  padding-bottom: 65px;
+}
+#start:hover,
+#start:focus {
+    box-shadow: 0 0.5em 0.5em -0.4em;
+    transform: translateY(-0.25em);
+  }
+  a , a:active , a:focus , a:link , a:visited {
+      text-decoration: none;
+      color: #ffffff ;
+  }
+
+
+img{
+    width: 300px;
+    height: 230px;
+}
+#hello{
+    width: 750px;
+    height: 300px;
+    font-size: xx-large;
+    font-weight: 900;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    position: absolute;
+    top: 120px;
+    left: 410px;
+    line-height: 15px;
+    
+}
+h3{
+    color: rgb(206, 226, 186);
+    letter-spacing: 6px;
+    
+}
+#page2{
+    height: 100vh;
+    width: 98.89vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+#page2 h3{
+
+margin: 50px 35px;
+}
+#page2 img{
+    margin-top: 100px;
+    margin-left: 90px;
+}
