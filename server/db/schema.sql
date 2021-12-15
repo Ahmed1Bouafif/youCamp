@@ -1,9 +1,9 @@
 
-DROP database IF EXISTS youcamp;
-CREATE DATABASE youcamp; 
-----------------------------------------------------
-
+DROP DATABASE IF EXISTS youcamp;
+CREATE DATABASE youcamp;
+USE youcamp;
 CREATE TABLE test (
-  userId int(8) PRIMARY KEY NOT NULL auto_increment ,
-  userName varchar(255),
+ userId int PRIMARY KEY NOT NULL AUTO_INCREMENT ,
+ userName varchar(255)
 );
+
