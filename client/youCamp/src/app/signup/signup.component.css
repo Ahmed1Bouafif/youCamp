@@ -1,0 +1,29 @@
+#all {
+    background-image: url(https://media1.fdncms.com/orlando/imager/u/original/4575221/shutterstock_136807502-2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+.container{
+    position: absolute;
+    top: 20px;
+    width: 1900px;
+}
+
+label{
+    color:#f9c563
+}
+
+.text-theme {
+    color: #f9c563 !important;
+}
+.btn-theme {
+    background-color: #f9c563;
+    border-color: #f9c563;
+    color: rgb(0, 0, 0);
+}
+.bob{
+    color:#f9c563
+}
+
+
