@@ -15,7 +15,7 @@
     top: 0;
     left: 0;
     bottom: 0;
-    background-color: #c84b24;
+    background-color: #051b01;
     transform: translateX(-100%);
     transition: ease-in-out 300ms transform;
     width: 300px;
@@ -40,21 +40,28 @@
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-    color: white;
-    font-size: 16px;
+    background-color:#051b01;
+    font-size: 30px;
     padding: 8px;
     height: 100%;
+    margin-top: -110%;
+    margin-right: 70%;
+    
     
 }
 .navbutton , .sidebar-opener{
-    color: #c84b24;
+    color: #051b01;
 }
-#dropdownBasic1{
-    margin-block-start: -280%;
-    margin-right: 50%;
-    background-color:rgb(7, 20, 2);
-    border-color:rgb(7, 20, 2);
-    color: white;
-    position:relative;
+.sidebarList{
+    font-size: 122px;
+    font-weight: bold;
+}
+.item{
+    color:white;
     
+}
+.item1{
+    color:white;
+    margin-left: 20%;
+    cursor: pointer;
 }

@@ -22,6 +22,6 @@ export class MarketComponent implements OnInit {
   ngOnInit(): void {
   }
   navigateR() {
-    this.router.navigateByUrl('/categories.component');
+    this.router.navigateByUrl('/cat');
   }
 }

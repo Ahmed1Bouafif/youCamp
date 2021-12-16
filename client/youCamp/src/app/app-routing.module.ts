@@ -14,7 +14,9 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot([
-    {path:'',component:PostListComponent}
+    {path:'',component:PostListComponent},
+    { path : 's' , component: MarketComponent} ,
+    {path:'cat' , component : CategoriesComponent}
   ])
 ],
   exports: [RouterModule]

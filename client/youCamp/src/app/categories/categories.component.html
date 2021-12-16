@@ -1,1 +1,18 @@
-<p>categories works!</p>
+<div class="sidebar-opener" (click)="sidebarShow = !sidebarShow">
+    <fa-icon [icon]="sidebarIcon"></fa-icon>
+</div>
+<div class="sidebar-slider" [class.sidebar-slide-in]="sidebarShow">
+   <div
+       class="sidebar-close"
+       (click)="sidebarShow = !sidebarShow"
+   >
+       X
+   </div>
+     <div class="sidebar-content">
+       <div class="row">
+           <div class="col">
+             
+             </div>
+           </div>
+     </div>
+</div>

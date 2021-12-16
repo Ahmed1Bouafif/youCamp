@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import {faBars} from '@fortawesome/free-solid-svg-icons';
+//import { Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-categories',
@@ -8,6 +12,8 @@ import { Component, OnInit } from '@angular/core';
 export class CategoriesComponent implements OnInit {
 
   constructor() { }
+  sidebarIcon = faBars;
+ public sidebarShow: boolean = false;
 
   ngOnInit(): void {
   }

@@ -9,14 +9,15 @@ import { AppComponent } from './app.component';
 import { MarketComponent } from './market/market.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatListModule} from '@angular/material/list';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-
     MarketComponent,
     CategoriesComponent, 
     
@@ -27,7 +28,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
     HttpClientModule,
     FontAwesomeModule,
     NgbModule,
-    
+    BrowserAnimationsModule,
+    BrowserAnimationsModule, 
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
