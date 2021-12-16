@@ -9,11 +9,11 @@ USE youcamp;
 -- );
 CREATE TABLE users (
   userId int NOT NULL AUTO_INCREMENT ,
-  userName varchar(255),
+  userName varchar unique(255),
   firstName varchar(255),
-  Adress varchar(255),
+  Adress varchar unique(255),
   phoneNumber varchar(255),
-  img varchar(255),
+  password varchar(255),
   PRIMARY KEY (userId)
 );
 
