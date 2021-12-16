@@ -18,8 +18,8 @@ app.use("/",router1);
 app.use("/api/test",test)
 app.use("/api/addproduct",addingproduct)
 app.use("/api/marketP",gettingMarketProducts)
-app.use("/api/addPost",addPost)
-app.use("/api/addComment/:_id",addComment)
+// app.use("/api/addPost",addPost)
+// app.use("/api/addComment/:_id",addComment)
 
 
 
