@@ -6,16 +6,33 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TestComponent } from './test/test.component';
 import { PostListComponent } from './post-list/post-list.component'; 
+import { MarketComponent } from './market/market.component';
+import { CategoriesComponent } from './categories/categories.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
+
+
+
+    
+//import { TestComponent } from './test/test.component';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent,
-    PostListComponent
+    PostListComponent,
+    MarketComponent,
+    CategoriesComponent, 
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule,
+    NgbModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
