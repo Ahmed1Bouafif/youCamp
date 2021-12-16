@@ -1,1 +1,25 @@
-<p>market works!</p>
+
+<div class="sidebar-opener" (click)="sidebarShow = !sidebarShow">
+     <fa-icon [icon]="sidebarIcon"></fa-icon>
+</div>
+<div class="sidebar-slider" [class.sidebar-slide-in]="sidebarShow">
+    <div
+        class="sidebar-close"
+        (click)="sidebarShow = !sidebarShow"
+    >
+        X
+    </div>
+	  <div class="sidebar-content">
+        <div class="row">
+            <div class="col">
+              <div id="sidebar" ngbDropdown class="d-inline-block">
+                <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>Filter By</button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                  <button ngbDropdownItem (click)='navigateR'>categories</button>
+                  <button ngbDropdownItem>price</button>
+                  
+                </div>
+              </div>
+            </div>
+	  </div>
+</div>
