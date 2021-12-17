@@ -1,32 +1,49 @@
 import { Component, OnInit } from '@angular/core';
 import { products } from '../products';
 import { HttpClient } from '@angular/common/http';
+
 @Component({
   selector: 'app-post-list',
   templateUrl: './post-list.component.html',
   styleUrls: ['./post-list.component.css']
 })
 export class PostListComponent implements OnInit {
-  post=String;
+  content:String="";
+  imgUrl:String="";
+  products: any= [];
   constructor(private http:HttpClient) {}
-  products = products;
+  
   
 
  
   ngOnInit(): void {
+    this.products = products;
   }
   
   addPost(){
-    let url = "http://localhost:4200/post"
-    this.http.post<any>(url, { title: 'Angular POST Request Example' }).subscribe({
+    let post ={
+      content:this.content,
+      imgUrl:this.imgUrl
+    }
+    let url = "http://localhost:4000/post"
+    this.http.post(url, post).subscribe({
       next: data => {
-          this.post = data;
+          console.log(data);
+          
       },
       error: error => {
           
-          console.error('There was an error!', error);
+          console.error( error);
       }
   })
+  }
+  onchangeContent(event:any){
+    console.log(event)
+    this.content = event
+  }
+  onchangeImg(event:any){
+    console.log(event)
+    this.imgUrl = event
   }
  
 

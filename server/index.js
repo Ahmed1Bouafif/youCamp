@@ -14,11 +14,12 @@ var test = require('./routers/test.js')
 var addingproduct = require('./routers/MarketProducts.js')
 var gettingMarketProducts=require('./routers/MarketPructsGet.js')
 var addComment = require('./routers/addComment.js')
+var addPost = require('./routers/addPost.js')
 app.use("/",router1);
 app.use("/api/test",test)
 app.use("/api/addproduct",addingproduct)
 app.use("/api/marketP",gettingMarketProducts)
-app.use("/api/addPost",addPost)
+app.use("/posts",addPost)
 app.use("/api/addComment/:_id",addComment)
 
 
