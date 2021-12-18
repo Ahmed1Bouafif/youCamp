@@ -12,10 +12,10 @@ export class TestComponent implements OnInit {
   ngOnInit(): void {
     this.http.get<any>('http://localhost:4000/api/test').subscribe({
       next:Response=>{
-        console.log(Response)
+        // console.log(Response)
       },
       error:error=>{
-        console.error(error)
+        // console.error(error)
       }
     })
   }

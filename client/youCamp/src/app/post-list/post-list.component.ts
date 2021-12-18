@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { products } from '../products';
+// import { products } from '../products';
 import { HttpClient } from '@angular/common/http';
+////
+// import{FileUpLoadService} from
+
 
 @Component({
   selector: 'app-post-list',
@@ -11,13 +14,18 @@ export class PostListComponent implements OnInit {
   content:String="";
   imgUrl:String="";
   products: any= [];
+  
+
   constructor(private http:HttpClient) {}
   
   
 
  
   ngOnInit(): void {
-    this.products = products;
+    // this.products = products;
+    this.http.get('http://localhost:4000/post').subscribe(data => {
+      this.products = data;
+  })        
   }
   
   addPost(){

@@ -1,34 +1,56 @@
-
+<div class="component">
+  <div class="inputs">
+  <div class="input-group mb-3">
+    <input [ngModel]="content" (ngModelChange)="onchangeContent($event)" type="text" name="content" class="form-control" placeholder="share your adventure !" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
+  <div class="input-group mb-3">
+    <input [ngModel]="imgUrl" (ngModelChange)="onchangeImg($event)" type="text" name="imgUrl" class="form-control" placeholder="your img" aria-label="Username" aria-describedby="basic-addon1">
+  </div>
   
- 
-<!--     
-   <button type="button" class="btn btn-primary">Primary</button>
-   
-    <h2>posts</h2>
-  <div *ngFor="let product of products">
-  <h3>{{product.name}}</h3>
-  <img src={{product.img}} alt="">
-  <p>text: {{product.text}}</p>
-  <button  >comment</button>
-  <input type="text">
-  </div> -->
- <div class="content">
-      <!-- <input type="text"  [ngModel]="post" placeholder="add post" name="post" > -->
-      <input [ngModel]="content" (ngModelChange)="onchangeContent($event)" type="text"  name="content"  >
-      <input [ngModel]="imgUrl" (ngModelChange)="onchangeImg($event)" type="text"  name="imgUrl"  >
-      <button (click)="addPost()" >post</button>
+  <!-- <input [ngModel]="content" (ngModelChange)="onchangeContent($event)" type="text" name="content"> -->
+  <!-- <input [ngModel]="imgUrl" (ngModelChange)="onchangeImg($event)" type="text" name="imgUrl"> -->
+  <button class="btn btn-light" (click)="addPost()">post</button>
+
+</div>
+<!-- <div class="card mb-3">
+  <div class="oneCard">
+  <div *ngFor="let product of products" class="row g-0">
+    
+    <div class="col-md-4">
+      <img src={{product.imgUrl}} class="img-fluid rounded-start" alt="...">
     </div>
-  <!-- <div class="card mb-3" >
-    <div *ngFor="let product of products" class="row g-0">
-      <div class="col-md-4">
-        <img src={{product.imgUrl}} class="img-fluid rounded-start" alt="...">
-      </div>
-      <div class="col-md-8">
-        <div class="card-body">
-         <h5 class="card-title">{{product.name}}</h5> 
-          <p class="card-text">{{product.content}}</p>
-          <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    
+    <div class="col-md-8">
+      <div class="card-body">
+
+        <p class="card-text">{{product.content}}</p>
+        <div>
+        <input type="text"  name="comment" placeholder="Your comment name..">
+        <button>add</button>
         </div>
+        <p class="card-time"><small class="text-muted">Last updated 3 mins ago</small></p>
       </div>
     </div>
-  </div> -->
+    </div>
+  </div>
+</div>
+</div> -->
+
+
+
+
+<div class="contain">
+  <div *ngFor="let product of products" class="carD-contain">
+    <div  class="head">
+      <img src={{product.imgUrl}} alt="">
+      <h2>userName</h2>
+     </div>
+     <div class="text"> 
+       <p>{{product.content}}</p> 
+       <button id="comment">comment</button>
+       <input id="comment-input" type="text">
+      </div>
+      
+  </div>
+</div>
+</div>
