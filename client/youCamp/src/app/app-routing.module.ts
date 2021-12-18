@@ -11,9 +11,11 @@ import { CategoriesComponent } from './categories/categories.component';
 const routes: Routes = [
   {path: '' , component: FirstHomeComponent},
   {path:'signup' , component: SignupComponent},
-  {path:'post' , component: PostListComponent}
+  {path:'post' , component: PostListComponent},
+  {path:'s' , component: MarketComponent},
+  {path:'cat' , component: CategoriesComponent},
   
-
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)
