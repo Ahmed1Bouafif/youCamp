@@ -8,6 +8,7 @@
 
 .sidebar-opener {
     cursor: pointer;
+    margin-left: 1%;
 }
 
 .sidebar-slider {
@@ -19,6 +20,8 @@
     transform: translateX(-100%);
     transition: ease-in-out 300ms transform;
     width: 300px;
+    position:fixed;
+
 }
 
 .sidebar-slider.sidebar-slide-in {
@@ -46,11 +49,13 @@
     height: 100%;
     margin-top: -110%;
     margin-right: 70%;
+    position:fixed;
     
     
 }
 .navbutton , .sidebar-opener{
-    color: #051b01;
+    color:#051b01
+  
 }
 .sidebarList{
     font-size: 122px;
@@ -65,3 +70,96 @@
     margin-left: 20%;
     cursor: pointer;
 }
+
+.example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+  
+  .example-button-row {
+    display: table-cell;
+    width: 490px;
+  }
+  
+  .example-button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+  }
+  
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+  }
+
+  .hovereffect {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+  }
+  .hovereffect .overlay {
+    position: absolute;
+    overflow: hidden;
+    width: 80%;
+    height: 80%;
+    left: 10%;
+    top: 10%;
+    border-bottom: 1px solid #FFF;
+    border-top: 1px solid #FFF;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(0,1);
+    -ms-transform: scale(0,1);
+    transform: scale(0,1);
+  }
+  .hovereffect:hover .overlay {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  .hovereffect img {
+    display: block;
+    position: absolute;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+    
+    height: 90%;
+    width: 95%;
+    margin-left: 1%;
+
+  }
+  .hovereffect:hover img {
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.6" /><feFuncG type="linear" slope="0.6" /><feFuncB type="linear" slope="0.6" /></feComponentTransfer></filter></svg>#filter');
+    filter: brightness(0.6);
+    -webkit-filter: brightness(0.6);
+  }
+  .hovereffect p {
+    color: #FFF;
+    font-size:bold;
+    padding: 1em 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0,100%,0);
+    transform: translate3d(0,100%,0);
+  }
+  .hovereffect:hover p{
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {faBars} from '@fortawesome/free-solid-svg-icons';
-//import { Router } from '@angular/router';
-
+import { Router } from '@angular/router';
+import {faHome} from '@fortawesome/free-solid-svg-icons';
 
 
 @Component({
@@ -10,12 +10,16 @@ import {faBars} from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./categories.component.css']
 })
 export class CategoriesComponent implements OnInit {
+  homeIcon=faHome;
 
-  constructor() { }
+  constructor(private router: Router) { }
   sidebarIcon = faBars;
  public sidebarShow: boolean = false;
 
   ngOnInit(): void {
+  }
+  navHome(){
+    this.router.navigateByUrl('s');
   }
 
 }
