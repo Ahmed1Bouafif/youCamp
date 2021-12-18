@@ -14,8 +14,11 @@ const routes: Routes = [
   {path: 'signup' , component: SignupComponent},
   {path:'post' , component: PostListComponent},
   {path:'login'&&'signup/login', component:LoginComponent},
+  {path:'post' , component: PostListComponent},
+  {path:'s' , component: MarketComponent},
+  {path:'cat' , component: CategoriesComponent},
+  
 ]
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)
