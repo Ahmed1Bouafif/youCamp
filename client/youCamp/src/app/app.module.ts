@@ -12,6 +12,8 @@ import { FirstHomeComponent } from './first-home/first-home.component';
 import { SignupComponent } from './signup/signup.component';
 import {PostListComponent} from './post-list/post-list.component'
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+
 
 @NgModule({
   declarations: [
@@ -20,8 +22,9 @@ import { FormsModule } from '@angular/forms';
     TestComponent,
     SignupComponent,
     PostListComponent,
+    LoginComponent,
     MarketComponent,
-    CategoriesComponent, 
+    CategoriesComponent
   ],
   imports: [
     BrowserModule,

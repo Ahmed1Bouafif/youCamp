@@ -14,6 +14,7 @@ var test = require('./routers/test.js')
 var addingproduct = require('./routers/MarketProducts.js')
 var gettingMarketProducts=require('./routers/MarketPructsGet.js')
 var signup=require('./routers/Users.js')
+var login=require('./routers/login.js')
 var addComment = require('./routers/addComment.js')
 var addPost = require('./routers/addPost.js')
 var addPostGet = require('./routers/addPostGet.js')
@@ -25,6 +26,8 @@ app.use("/api/addComment/:_id",addComment)
 app.use("/",addPost)
 app.use("/",addPostGet)
 
+
+app.use("/",login)
 app.use("/",signup)
 
 
