@@ -7,7 +7,7 @@ var router = express.Router()
 var cors = require('cors');
 app.use(express.json())
 app.use(cors());
-// app.use(bodyParser.json())
+
 app.use(bodyParser.urlencoded({extended: true}));
 var router1 = require('./routers/router1.js')
 var test = require('./routers/test.js')
