@@ -1,4 +1,4 @@
-<div class="content">
+<!-- <div class="content">
   <input type="text"  ng-model="post" placeholder="add post" >
 </div>
 <h2>posts</h2>
@@ -8,6 +8,28 @@
 <p>text: {{product.text}}</p>
 <button  >comment</button>
 <input type="text">
+</div> -->
+
+<!-- <div class="content">
+  <input type="text"  ng-model="post" placeholder="add post" >
+</div>
+<div class="card bg-dark text-white"  *ngFor="let product of products">
+  <img class="card-img" src= {{product.img}} alt="Card image">
+  <div class="card-img-overlay">
+    <h5 class="card-title">{{product.name}}</h5>
+    <p class="card-text">{{product.text}}</p>
+    <input type="text">
+    <a href="#" class="btn btn-primary">comment</a>
+  </div>
+</div> -->
+
+<div class="jumbotron" *ngFor="let product of products" >
+  <h1 class="display-4">{{product.name}}</h1>
+  <img class="card-img" src= {{product.img}} alt="Card image">
+  <p class="lead">{{product.text}}</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+  <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
 </div>
 
 

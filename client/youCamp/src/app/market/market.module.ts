@@ -5,7 +5,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
 imports:[BrowserModule , NgbModule],
-// 
 declarations:[MarketComponent],
 exports:[MarketComponent],
 bootstrap: [MarketComponent]

@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 import { MarketComponent } from './market/market.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 // import { RouterOutlet } from '@angular/router';
 import { FirstHomeComponent } from './first-home/first-home.component';

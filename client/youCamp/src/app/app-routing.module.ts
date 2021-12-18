@@ -9,23 +9,28 @@ import { CategoriesComponent } from './categories/categories.component';
 
 
 const routes: Routes = [
-  // 
+  
+  
+  
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot([
-    {path:'',component:PostListComponent},
-    { path : 's' , component: MarketComponent} ,
-    {path:'b' , component : CategoriesComponent},
-    {path: 'l' , component: FirstHomeComponent},
+    {path: '' , component: FirstHomeComponent},
+    {path:'posts',component:PostListComponent},
+    {path : 'Market' , component: MarketComponent} ,
     {path:'signup' , component: SignupComponent},
-    {path:'post' , component: PostListComponent}
-])]
-})
-   
+      {path:'categories' , component : CategoriesComponent}
+    ])],
+    exports: [RouterModule]
+  })
   
   
-
-
-
+  
+  
+//   @NgModule({
+//     imports: [RouterModule.forRoot(routes)
+     
+// ],
+// })
 export class AppRoutingModule { }
