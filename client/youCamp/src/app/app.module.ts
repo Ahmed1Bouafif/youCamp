@@ -15,6 +15,7 @@ import {PostListComponent} from './post-list/post-list.component'
 
 
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { FormsModule } from '@angular/forms';
     FirstHomeComponent,
     TestComponent,
     SignupComponent,
-    PostListComponent
+    PostListComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
