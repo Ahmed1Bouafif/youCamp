@@ -19,6 +19,7 @@ CREATE TABLE users (
 
 
 
+
 CREATE TABLE sellproducts (
   productId int NOT NULL AUTO_INCREMENT ,
   productName varchar(255),

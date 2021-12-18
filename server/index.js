@@ -14,6 +14,7 @@ var test = require('./routers/test.js')
 var addingproduct = require('./routers/MarketProducts.js')
 var gettingMarketProducts=require('./routers/MarketPructsGet.js')
 var signup=require('./routers/Users.js')
+var login=require('./routers/login.js')
 var addComment = require('./routers/addComment.js')
 app.use("/",router1);
 app.use("/api/test",test)
@@ -23,7 +24,7 @@ app.use("/api/marketP",gettingMarketProducts)
 app.use("/api/addComment/:_id",addComment)
 
 
-
+app.use("/",login)
 app.use("/",signup)
 
 
