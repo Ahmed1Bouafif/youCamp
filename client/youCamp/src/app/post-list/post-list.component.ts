@@ -36,7 +36,7 @@ export class PostListComponent implements OnInit {
     let post ={
       content:this.content,
       imgUrl:this.imgUrl,
-      createdAt:this.createdAt
+      
     }
     let url = "http://localhost:4000/post"
     this.http.post(url, post).subscribe({
