@@ -15,7 +15,7 @@ export class MarketComponent implements OnInit {
  sidebarIcon = faBars;
  sell=faFolderPlus;
  public sidebarShow: boolean = false;
- public InputShow: boolean = false;
+
  items: any = [];
   ngOnInit(): void {
     this.http.get<any>('http://localhost:4000/api/marketP').subscribe({
