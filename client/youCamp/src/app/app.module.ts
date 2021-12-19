@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { TestComponent } from './test/test.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { MarketComponent } from './market/market.component';
 import { CategoriesComponent } from './categories/categories.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -16,20 +17,26 @@ import {PostListComponent} from './post-list/post-list.component'
 import {  FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from "@angular/material/form-field";
-import { PostItemComponent } from './post-item/post-item.component';
+// import { PostItemComponent } from './post-item/post-item.component';
 import { LoginComponent } from './login/login.component';
+import { PostItemComponent } from './post-item/post-item.component';
+
+    
+//import { TestComponent } from './test/test.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    FirstHomeComponent,
-    TestComponent,
-    SignupComponent,
     PostListComponent,
     LoginComponent,
     MarketComponent,
-    CategoriesComponent,
+    CategoriesComponent, 
+    FirstHomeComponent,
+    SignupComponent,
+    TestComponent,
+    // RouterOutlet
     PostItemComponent, 
     CategoriesComponent
   ],

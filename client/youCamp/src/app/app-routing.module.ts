@@ -30,15 +30,29 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot([
-    {path: '' , component: FirstHomeComponent},
-    {path:'signup' , component: SignupComponent},
-    { path : 's' , component: MarketComponent} ,
-    {path:'cat' , component : CategoriesComponent},
-  {path:'post' , component: PostListComponent},
-  {path:'postItem' , component:PostItemComponent }
 
-  ])],
+    // {path: '' , component: FirstHomeComponent},
+    // {path:'posts',component:PostListComponent},
+    // {path : 'Market' , component: MarketComponent} ,
+    // {path:'signup' , component: SignupComponent},
+    //   {path:'categories' , component : CategoriesComponent}
+    {path: '' , component: FirstHomeComponent},
+    {path: 'signup' , component: SignupComponent},
+    {path:'post' , component: PostListComponent},
+    {path:'login'&&'signup/login', component:LoginComponent},
+    // {path:'post' , component: PostListComponent},
+    {path:'s' , component: MarketComponent},
+    {path:'cat' , component: CategoriesComponent},
+    ])],
+    exports: [RouterModule]
+  })
   
-  exports: [RouterModule]
-})
+  
+  
+  
+//   @NgModule({
+//     imports: [RouterModule.forRoot(routes)
+     
+// ],
+// })
 export class AppRoutingModule { }
