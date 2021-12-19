@@ -4,7 +4,7 @@ var db = require('../db/index.js')
 router.route("/post")
 
 .post((req,res)=>{
-    db.query("insert into posts (content ,imgUrl) values(?,?)",[req.body.content,req.body.imgUrl],
+    db.query("insert into posts (content ,imgUrl,createdAt) values(?,?,?)",[req.body.content,req.body.imgUrl,req.body.createdAt],
     (err,result)=>{
         if(err){
             console.log(err);

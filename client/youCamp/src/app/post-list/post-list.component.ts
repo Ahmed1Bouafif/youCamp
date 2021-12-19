@@ -13,6 +13,7 @@ import { HttpClient } from '@angular/common/http';
 export class PostListComponent implements OnInit {
   content:String="";
   imgUrl:String="";
+  createdAt:String="";
   products: any= [];
   user:String="";
   post:String="";
@@ -34,7 +35,8 @@ export class PostListComponent implements OnInit {
   addPost(){
     let post ={
       content:this.content,
-      imgUrl:this.imgUrl
+      imgUrl:this.imgUrl,
+      createdAt:this.createdAt
     }
     let url = "http://localhost:4000/post"
     this.http.post(url, post).subscribe({
