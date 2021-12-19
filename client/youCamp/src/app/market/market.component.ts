@@ -16,11 +16,14 @@ export class MarketComponent implements OnInit {
  sell=faFolderPlus;
  public sidebarShow: boolean = false;
  public InputShow: boolean = false;
- 
+ items: any = [];
   ngOnInit(): void {
     this.http.get<any>('http://localhost:4000/api/marketP').subscribe({
       next:Response=>{
-        console.log(Response)
+        console.log( 'Response : ',Response)
+        this.items=Response;
+        console.log('items :',this.items);
+        
       },
       error:error=>{
         console.error(error)
@@ -32,19 +35,6 @@ export class MarketComponent implements OnInit {
   }
   navigate() {
     this.router.navigateByUrl('/postItem');
-  }
-
-  post(){
-    let url = "http://localhost:4000/api/addproduct";
-    this.http.post<any>(url, { title: 'Angular POST Request Example' }).subscribe({
-      next: data => {
-          this.post = data;
-      },
-      error: error => {
-          
-          console.error('There was an error!', error);
-      }
-  })
   }
   filter(){
     // this.http.get<any>('http://localhost:4000/api/filterProducts').subscribe({

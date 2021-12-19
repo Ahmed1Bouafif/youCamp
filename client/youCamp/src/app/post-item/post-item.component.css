@@ -1,24 +1,29 @@
-#postform{
-    margin-left:30%;
-    position:fixed;
-}
+
 .example-full-width{
    width:500px;
- 
+   height:100px;
 } 
 #btn{
-    margin-left: 10%;
+    margin-left: 28%;
 }
 
 #bg {
-    position:fixed;
-     
-      
-    /* Preserve aspet ratio */
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 95%;
+    margin-left: 45%;
+    margin-top:-30%;
   }
   .backHome{
-    position:fixed;
+    
     cursor: pointer;
   }
+/* .postform{
+  vertical-align:middle
+} */
+.example-form{
+  margin-left: 10%;
+  margin-top: 10%;
+
+
+  
+}

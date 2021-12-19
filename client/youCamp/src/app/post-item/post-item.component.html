@@ -1,21 +1,27 @@
-<body>   
-   <img src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8NHx8fGVufDB8fHx8&w=1000&q=80" id="bg" >
-   <div class='backHome' (click)='navHome()'><fa-icon [icon]="homeIcon"></fa-icon> </div>
-    <form class="example-form" id='postform'>
+  <span class='backHome' (click)='navHome()'><fa-icon [icon]="homeIcon"></fa-icon></span>
+   
+    <form class="example-form">
+      <div>
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Product Name</mat-label>
             <textarea matInput  (ngModelChange)='onchangeN($event)'></textarea>
           </mat-form-field>  
+        </div>
+        <div>
           <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Picture Of Your Product</mat-label>
             <textarea matInput placeholder="leave a url of product picture" type='url' (ngModelChange)='onchangeP($event)'></textarea>
           </mat-form-field>  
+        </div>
+        <div>
           <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Description</mat-label>
             <textarea matInput placeholder=" a little description"  (ngModelChange)='onchangeD($event)'></textarea>
-          </mat-form-field>  
-          <button type="button" class="btn btn-outline-warning" id='btn'  (click)="post()">post</button> 
-
+          </mat-form-field> 
+        </div> 
+          <button type="button" class="btn btn-primary" id='btn'  (click)="post()">Post</button>
     </form>
-</body>
+ 
+    <img src="http://cdn2.atlantamagazine.com/wp-content/uploads/sites/12/2014/10/1014_hikesgear_kburdg_oneuseonly.jpg" id="bg" >
+
    
