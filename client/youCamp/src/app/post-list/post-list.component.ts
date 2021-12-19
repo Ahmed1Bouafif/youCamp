@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 // import { products } from '../products';
 import { HttpClient } from '@angular/common/http';
 ////
+import { Router } from '@angular/router';
 // import{FileUpLoadService} from
 
 
@@ -17,10 +18,10 @@ export class PostListComponent implements OnInit {
   products: any= [];
   user:String="";
   post:String="";
-  
+  // localStorage:any="";
   
 
-  constructor(private http:HttpClient) {}
+  constructor(private http:HttpClient,private router: Router) {}
   
   
 
@@ -36,6 +37,7 @@ export class PostListComponent implements OnInit {
     let post ={
       content:this.content,
       imgUrl:this.imgUrl,
+      userId:localStorage.getItem('userId')
       
     }
     let url = "http://localhost:4000/post"
@@ -81,7 +83,16 @@ export class PostListComponent implements OnInit {
   //   this.content = event
   // }
 
-   
-  
-  
+  navigateS() {
+    this.router.navigateByUrl('/s');
+
+}
+navigateHome() {
+    this.router.navigateByUrl('/');
+
+}
+navigatelogout() {
+    this.router.navigateByUrl('/signup/login');
+
+}
 }
