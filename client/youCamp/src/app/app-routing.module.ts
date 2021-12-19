@@ -7,7 +7,15 @@ import {PostListComponent} from './post-list/post-list.component'
 import {LoginComponent} from './login/login.component'
 import { MarketComponent } from './market/market.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { PostItemComponent } from './post-item/post-item.component';
 
+
+
+// const routes: Routes = [
+//   {path: '' , component: FirstHomeComponent},
+//   {path:'signup' , component: SignupComponent},
+//   {path:'post' , component: PostListComponent}
+// ]
 
 const routes: Routes = [
   {path: '' , component: FirstHomeComponent},
