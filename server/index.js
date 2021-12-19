@@ -3,7 +3,7 @@ var app = express();
 var db = require('./db/index.js')
 var json = require('express-json')
 var bodyParser = require('body-parser');
-var router = express.Router()
+// var router = express.Router();
 var cors = require('cors');
 app.use(express.json())
 app.use(cors());
@@ -14,14 +14,20 @@ var test = require('./routers/test.js')
 var addingproduct = require('./routers/MarketProducts.js')
 var gettingMarketProducts=require('./routers/MarketPructsGet.js')
 var signup=require('./routers/Users.js')
+var login=require('./routers/login.js')
 var addComment = require('./routers/addComment.js')
+var addPost = require('./routers/addPost.js')
+var addPostGet = require('./routers/addPostGet.js')
 app.use("/",router1);
 app.use("/api/test",test)
 app.use("/api/addproduct",addingproduct)
 app.use("/api/marketP",gettingMarketProducts)
-
 app.use("/api/addComment/:_id",addComment)
+app.use("/",addPost)
+app.use("/",addPostGet)
 
+
+app.use("/",login)
 app.use("/",signup)
 
 
