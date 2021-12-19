@@ -10,7 +10,7 @@ const saltRounds = 10;
 router.route("/login")
 
 .post((req,res)=>{
-    console.log(req.body)
+    // console.log(req.body)
     db.query('select * from users where userName=?',[req.body.userName],(err,result)=>{
         if(err){
             console.log("userName wrong")
@@ -22,8 +22,8 @@ router.route("/login")
                     console.log(err)
                     console.log("password is wrong")
                 }else{
-                    console.log(response)
-                    res.json(result)
+                    // console.log(response)
+                    res.send(result)
                 }
               })}
     })
