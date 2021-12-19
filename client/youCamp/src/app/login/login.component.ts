@@ -21,9 +21,11 @@ export class LoginComponent implements OnInit {
       userName:this.userName, 
       password:this.password
     }
-    console.log(user)
+    // console.log(user)
     this.http.post('http://localhost:4000/login',user ).subscribe({next:data=>{
-      console.log(data)
+      // console.log(res)
+      // localStorage.setItem("session", JSON.stringify(res));
+      localStorage.setItem("session ", JSON.stringify(data))
     },
     error:error=>{
       console.error(error)
