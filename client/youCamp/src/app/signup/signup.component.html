@@ -1,0 +1,40 @@
+<div id="all">
+<div id="main-wrapper" class="container">
+    <div class="row justify-content-center">
+        <div class="col-xl-10">
+                        <div class="col-lg-9">
+                            <div class="p-5">
+                                <div class="mb-5">
+                                    <h3 class="h4 font-weight-bold text-theme">Register</h3>
+                                </div>
+                                <form>
+                                    <div class="form-group">
+                                        <label for="UserName">User Name</label>
+                                        <input [ngModel]="userName" (ngModelChange)="onchange($event)" type="text" class="form-control" name="userName" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="FirstName">First Name</label>
+                                        <input [ngModel]="firstName" (ngModelChange)="onchange1($event)" type="text" class="form-control" name="firstName" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="AdressEmail">Adress Email</label>
+                                        <input [ngModel]="adress" (ngModelChange)="onchange2($event)" type="email" class="form-control" name="adress" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="PhoneNumber">Phone Number</label>
+                                        <input [ngModel]="phoneNumber" (ngModelChange)="onchange3($event)" type="text" class="form-control" name="phoneNumber" />
+                                    </div>
+                                    <div class="form-group mb-5">
+                                        <label for="Password">Password</label>
+                                        <input [ngModel]="password" (ngModelChange)="onchange4($event)" type="Password" class="form-control" name="password" />
+                                    </div>
+                                    <button type="submit" (click)="enter()" routerLink='login' class="btn btn-theme">Register</button>
+                                </form>
+
+                </div>
+            </div>
+            <p class="text-muted text-center mt-3 mb-0">Already have an account? <a routerLink='login'  class="bob ml-1">login</a></p>
+        </div>
+    </div>
+</div>
+</div>
