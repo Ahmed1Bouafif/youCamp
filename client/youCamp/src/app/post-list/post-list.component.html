@@ -1,10 +1,11 @@
+
 <div class="component">
   <div class="inputs">
   <div class="input-group mb-3">
-    <input [ngModel]="content" (ngModelChange)="onchangeContent($event)" type="text" name="content" class="form-control" placeholder="share your adventure !" aria-label="Username" aria-describedby="basic-addon1">
+    <input [ngModel]="content" (ngModelChange)="onchangeContent($event)" type="text" name="content" class="form-control" placeholder="       Share your adventure !" aria-label="Username" aria-describedby="basic-addon1">
   </div>
   <div class="input-group mb-3">
-    <input [ngModel]="imgUrl" (ngModelChange)="onchangeImg($event)" type="text" name="imgUrl" class="form-control" placeholder="your img" aria-label="Username" aria-describedby="basic-addon1">
+    <input [ngModel]="imgUrl" (ngModelChange)="onchangeImg($event)" type="text" name="imgUrl" class="form-control" placeholder="         Your img" aria-label="Username" aria-describedby="basic-addon1">
   </div>
   
   <!-- <input [ngModel]="content" (ngModelChange)="onchangeContent($event)" type="text" name="content"> -->
@@ -39,6 +40,8 @@
 
 
 
+
+
 <div class="contain">
   <div *ngFor="let product of products" class="carD-contain">
     <div  class="head">
@@ -47,8 +50,9 @@
      </div>
      <div class="text"> 
        <p>{{product.content}}</p> 
-       <button id="comment">comment</button>
-       <input id="comment-input" type="text">
+       <h5>{{product.createdAt}}</h5>
+       <button  id="comment">comment</button>
+       <input  id="comment-input" type="text" >
       </div>
       
   </div>
