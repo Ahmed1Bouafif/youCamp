@@ -28,12 +28,12 @@
                                         <label for="Password">Password</label>
                                         <input [ngModel]="password" (ngModelChange)="onchange4($event)" type="Password" class="form-control" name="password" />
                                     </div>
-                                    <button type="submit" (click)="enter()" class="btn btn-theme">Register</button>
+                                    <button type="submit" (click)="enter()" routerLink='login' class="btn btn-theme">Register</button>
                                 </form>
 
                 </div>
             </div>
-            <p class="text-muted text-center mt-3 mb-0">Already have an account? <a href="login.html"  class="bob ml-1">login</a></p>
+            <p class="text-muted text-center mt-3 mb-0">Already have an account? <a routerLink='login'  class="bob ml-1">login</a></p>
         </div>
     </div>
 </div>

@@ -1,4 +1,19 @@
 import { Component, OnInit } from '@angular/core';
+import {faBars} from '@fortawesome/free-solid-svg-icons';
+import { Router } from '@angular/router';
+import {faHome} from '@fortawesome/free-solid-svg-icons';
+import {faCampground} from '@fortawesome/free-solid-svg-icons';
+import {faTools} from '@fortawesome/free-solid-svg-icons';
+import {faMitten} from '@fortawesome/free-solid-svg-icons';
+import {faPumpSoap} from '@fortawesome/free-solid-svg-icons';
+import {faFire, faCartPlus} from '@fortawesome/free-solid-svg-icons';
+
+
+
+
+
+
+
 
 @Component({
   selector: 'app-categories',
@@ -6,10 +21,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./categories.component.css']
 })
 export class CategoriesComponent implements OnInit {
-
-  constructor() { }
+  homeIcon=faHome;
+ campsite=faCampground;
+ gear=faTools;
+ clothing=faMitten;
+ hygiene=faPumpSoap;
+ kitchen=faFire;
+ shop=faCartPlus;
+  constructor(private router: Router) { }
+  sidebarIcon = faBars;
+ public sidebarShow: boolean = false;
 
   ngOnInit(): void {
+  }
+  navHome(){
+    this.router.navigateByUrl('s');
   }
 
 }
