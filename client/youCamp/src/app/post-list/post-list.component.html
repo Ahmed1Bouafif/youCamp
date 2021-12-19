@@ -2,9 +2,9 @@
 <div class="component">
   <div class="navbar">
     <ul>
-      <li (click)="navigateHome()"><a>home</a></li>
+      <li (click)="navigateHome()"><a id="home">home</a></li>
       <li (click)="navigateS()"><a>shop</a></li>
-      <li (click)="navigatelogout()"><a>logout</a></li>
+      <li (click)="navigatelogout()"><a id="logout">logout</a></li>
      
     </ul>
   </div>
@@ -60,8 +60,8 @@
      <div class="text"> 
        <p>{{product.content}}</p> 
        <h5>{{product.createdAt}}</h5>
-       <button  id="comment">comment</button>
-       <input  id="comment-input" type="text" >
+       <button  id="comment" (click)="addComment()" >comment</button>
+       <input  id="comment-input" [ngModel]="com" (ngModelChange)="onchangeComment($event)" type="text" >
       </div>
       
   </div>

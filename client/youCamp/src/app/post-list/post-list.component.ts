@@ -18,6 +18,8 @@ export class PostListComponent implements OnInit {
   products: any= [];
   user:String="";
   post:String="";
+  com:String= "";
+  comments:any= []
   // localStorage:any="";
   
 
@@ -60,6 +62,34 @@ export class PostListComponent implements OnInit {
     console.log(event)
     this.imgUrl = event
   }
+  fetchComments() {
+    
+    
+    this.http.get("http://localhost:4000/comment").subscribe(data => {
+      this.comments = data;
+  })        
+  }
+  addComment(){
+    let comm={com:this.com,}
+    let url = "http://localhost:4000/comment"
+    this.http.post(url, comm).subscribe({
+      next: data => {
+          console.log(data);
+          
+      },
+      error: error => {
+          
+          console.error( error);
+      }
+  })
+      
+    }
+    onchangeComment(event:any){
+      console.log(event)
+      this.com = event
+    }
+   
+  
   // addComm(){
   //   let Comm ={
   //     content:this.content,
