@@ -13,7 +13,11 @@ import { HttpClient } from '@angular/common/http';
 export class PostListComponent implements OnInit {
   content:String="";
   imgUrl:String="";
+  createdAt:String="";
   products: any= [];
+  user:String="";
+  post:String="";
+  
   
 
   constructor(private http:HttpClient) {}
@@ -31,7 +35,8 @@ export class PostListComponent implements OnInit {
   addPost(){
     let post ={
       content:this.content,
-      imgUrl:this.imgUrl
+      imgUrl:this.imgUrl,
+      
     }
     let url = "http://localhost:4000/post"
     this.http.post(url, post).subscribe({
@@ -53,6 +58,30 @@ export class PostListComponent implements OnInit {
     console.log(event)
     this.imgUrl = event
   }
- 
+  // addComm(){
+  //   let Comm ={
+  //     content:this.content,
+  //     user:this.user,
+  //     post:this.post
+  //   }
+  //   let url = "http://localhost:4000/post"
+  //   this.http.post(url, Comm).subscribe({
+  //     next: data => {
+  //         console.log(data);
+          
+  //     },
+  //     error: error => {
+          
+  //         console.error( error);
+  //     }
+  // })
+  // }
+  // onchangeComment(event:any){
+  //   console.log(event)
+  //   this.content = event
+  // }
 
+   
+  
+  
 }
