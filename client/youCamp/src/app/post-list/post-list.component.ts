@@ -14,6 +14,9 @@ export class PostListComponent implements OnInit {
   content:String="";
   imgUrl:String="";
   products: any= [];
+  user:String="";
+  post:String="";
+  
   
 
   constructor(private http:HttpClient) {}
@@ -53,6 +56,30 @@ export class PostListComponent implements OnInit {
     console.log(event)
     this.imgUrl = event
   }
- 
+  // addComm(){
+  //   let Comm ={
+  //     content:this.content,
+  //     user:this.user,
+  //     post:this.post
+  //   }
+  //   let url = "http://localhost:4000/post"
+  //   this.http.post(url, Comm).subscribe({
+  //     next: data => {
+  //         console.log(data);
+          
+  //     },
+  //     error: error => {
+          
+  //         console.error( error);
+  //     }
+  // })
+  // }
+  // onchangeComment(event:any){
+  //   console.log(event)
+  //   this.content = event
+  // }
 
+   
+  
+  
 }
