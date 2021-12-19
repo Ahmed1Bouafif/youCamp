@@ -2,10 +2,6 @@ import {faBars , faFolderPlus} from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';
 import { Component ,OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
-
-
-
 @Component({
   selector: 'app-market' ,
   templateUrl: './market.component.html',
@@ -37,16 +33,8 @@ export class MarketComponent implements OnInit {
   navigate() {
     this.router.navigateByUrl('/postItem');
   }
-  add(){
-    // let row = document.createElement('div');  
-    //   row.className = 'row';
-    //   row.innerHTML = `
-    //   <br>
-    //   <textarea matInput placeholder="" type='url'></textarea>`;
-      
-  }
+
   post(){
-  
     let url = "http://localhost:4000/api/addproduct";
     this.http.post<any>(url, { title: 'Angular POST Request Example' }).subscribe({
       next: data => {
@@ -58,4 +46,16 @@ export class MarketComponent implements OnInit {
       }
   })
   }
-}
+  filter(){
+    // this.http.get<any>('http://localhost:4000/api/filterProducts').subscribe({
+    //   next:Response => {
+    //     console.log(Response)
+    //   },
+    //     error:error=>{
+    //       console.error(error)
+    //     }
+        
+    //   })
+    }
+  }
+

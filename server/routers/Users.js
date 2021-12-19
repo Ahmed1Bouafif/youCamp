@@ -1,7 +1,8 @@
 var express = require("express");
 var router = express.Router()
 var db = require('../db/index.js');
-
+const bcrypt = require('bcrypt');
+const saltRounds = 10;
 
 router.route("/signup")
 
@@ -13,6 +14,8 @@ router.route("/signup")
 //         db.query('insert into users (userName,firstName,Adress,phoneNumber,password) values (?,?,?,?,?) ',)
 //     }
 // })
+
+
     
 
 
@@ -21,16 +24,18 @@ router.route("/signup")
         if(result.length!==0){
             res.json('username exists')
         }else{
-    let posting='insert into users (userName,firstName,Adress,phoneNumber,password) values (?,?,?,?,?) ' 
-    db.query(posting,[req.body.userName,req.body.firstName,req.body.Adress,req.body.phoneNumber,req.body.password],(err,data)=>{
-        if(err){
-            console.log(err)
-        }else{
-            console.log(data)
-            res.send(data)
-        }
-    
-    })}
+    let posting='insert into users (userName,firstName,Adress,phoneNumber,password) values (?,?,?,?,?) '
+    bcrypt.hash(req.body.password, saltRounds, function(err, hash) {
+        db.query(posting,[req.body.userName,req.body.firstName,req.body.Adress,req.body.phoneNumber,hash],(err,data)=>{
+            if(err){
+                console.log(err)
+            }else{
+                console.log(data)
+                res.send(data)
+            }
+        })
+    }); 
+    }
 })})
 
 

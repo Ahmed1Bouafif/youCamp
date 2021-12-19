@@ -2,13 +2,13 @@
   <div class="sidebar-opener" (click)="sidebarShow = !sidebarShow">
     <fa-icon [icon]="sidebarIcon"></fa-icon>
 </div>
+ <!-- <fa-icon class="cartIcon" [icon]="shop"></fa-icon>   -->
+
 <div class="hovereffect"> 
   <img src="https://www.rei.com/dam/camping-checklist-lg1.jpg" class="gadgets">
   <div class="overlay">
     <p> ALL YOU NEED AND MORE</p>
     <div class='backHome' (click)='navHome()'><fa-icon [icon]="homeIcon"></fa-icon> </div>
-   
-    <!-- <button type="button" class="btn btn-light" id='btnA' (click)='navigate()'><fa-icon [icon]="sell"></fa-icon></button> -->
   </div>
 </div>
 
@@ -24,15 +24,33 @@
            <div class="col">
             <mat-list class='sidebarList'>
               <mat-list-item class='cat'> Campsite </mat-list-item>
+              <hr>
               <mat-list-item class='cat'> Tools and Repair Items </mat-list-item>
+              <hr>
               <mat-list-item class='cat'> Clothing </mat-list-item>
+              <hr>
               <mat-list-item class='cat'> Health & Hygiene </mat-list-item>
+              <hr>
               <mat-list-item class='cat'>Kitchen </mat-list-item>
 
              </mat-list>
              </div>
            </div>
      </div>
+</div>
+<div class='categoryN'>
+
+<h3> <fa-icon [icon]="campsite"></fa-icon>   Campsite </h3>
+<hr>
+<h3> <fa-icon [icon]="gear"></fa-icon> Tools and Repair Items</h3>
+<hr>
+<h3> <fa-icon [icon]="clothing"></fa-icon>Clothing</h3>
+<hr>
+<h3> <fa-icon [icon]="hygiene"></fa-icon>Health & Hygiene</h3>
+<hr>
+<h3> <fa-icon [icon]="kitchen"></fa-icon> Kitchen</h3>
 </div> 
+
+
 </body>
  
