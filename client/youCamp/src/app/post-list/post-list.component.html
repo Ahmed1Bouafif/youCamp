@@ -1,8 +1,16 @@
 
 <div class="component">
+  <div class="navbar">
+    <ul>
+      <li (click)="navigateHome()"><a>home</a></li>
+      <li (click)="navigateS()"><a>shop</a></li>
+      <li (click)="navigatelogout()"><a>logout</a></li>
+     
+    </ul>
+  </div>
   <div class="inputs">
   <div class="input-group mb-3">
-    <input [ngModel]="content" (ngModelChange)="onchangeContent($event)" type="text" name="content" class="form-control" placeholder="       Share your adventure !" aria-label="Username" aria-describedby="basic-addon1">
+    <input id="inputtext" [ngModel]="content" (ngModelChange)="onchangeContent($event)" type="text" name="content" class="form-control" placeholder="       Share your adventure !" aria-label="Username" aria-describedby="basic-addon1">
   </div>
   <div class="input-group mb-3">
     <input [ngModel]="imgUrl" (ngModelChange)="onchangeImg($event)" type="text" name="imgUrl" class="form-control" placeholder="         Your img" aria-label="Username" aria-describedby="basic-addon1">
@@ -46,7 +54,8 @@
   <div *ngFor="let product of products" class="carD-contain">
     <div  class="head">
       <img src={{product.imgUrl}} alt="">
-      <h2>userName</h2>
+      <h2>{{product.userId}}</h2>
+      
      </div>
      <div class="text"> 
        <p>{{product.content}}</p> 

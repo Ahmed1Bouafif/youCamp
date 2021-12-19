@@ -28,11 +28,13 @@
 } 
 
 input{
+  
   border-radius: 20px;
   background-color: #ddd;
 }
 
 .input-group{
+  margin-top: 30px;
  margin-left: 35px ;
  margin-bottom: 200px;
 width:90%;
@@ -153,4 +155,31 @@ box-shadow: 0 0 0 8px rgba(0,0,0, .06);
 }
 #comment-input{
   margin-left: 35px;
+}
+ul {
+  list-style-type: none;
+  margin-left: 150px;
+  padding: 0;
+  overflow: hidden;
+  background-color: #18191a;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 60px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+.navbar{
+  background-color: RGB( 40, 40, 40);
+  box-shadow: 0 0 0 8px rgba(0,0,0, .06);
 }
