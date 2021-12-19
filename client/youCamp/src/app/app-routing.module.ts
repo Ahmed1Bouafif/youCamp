@@ -7,7 +7,15 @@ import {PostListComponent} from './post-list/post-list.component'
 import {LoginComponent} from './login/login.component'
 import { MarketComponent } from './market/market.component';
 import { CategoriesComponent } from './categories/categories.component';
+import { PostItemComponent } from './post-item/post-item.component';
 
+
+
+// const routes: Routes = [
+//   {path: '' , component: FirstHomeComponent},
+//   {path:'signup' , component: SignupComponent},
+//   {path:'post' , component: PostListComponent}
+// ]
 
 const routes: Routes = [
   {path: '' , component: FirstHomeComponent},
@@ -21,8 +29,16 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)
-],
+  imports: [RouterModule.forRoot([
+    {path: '' , component: FirstHomeComponent},
+    {path:'signup' , component: SignupComponent},
+    { path : 's' , component: MarketComponent} ,
+    {path:'cat' , component : CategoriesComponent},
+  {path:'post' , component: PostListComponent},
+  {path:'postItem' , component:PostItemComponent }
+
+  ])],
+  
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
