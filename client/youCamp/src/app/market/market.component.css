@@ -135,7 +135,6 @@
     position: absolute;
     -webkit-transition: all 0.35s;
     transition: all 0.35s;
-    
     height: 90%;
     width: 95%;
     margin-left: 1%;
@@ -163,3 +162,16 @@
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
   }
+.card-group{ margin-top: 10%;
+  margin-left: 5%;
+display: inline-block;
+}
+.card-group img{
+  margin-top: 2%;
+  width: 80%;
+}
+.navB{
+  margin-left: 90%;
+  cursor: pointer;
+   margin-bottom: 15%;
+} 
