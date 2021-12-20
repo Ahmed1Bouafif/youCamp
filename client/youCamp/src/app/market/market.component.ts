@@ -20,14 +20,16 @@ export class MarketComponent implements OnInit {
  sidebarIcon = faBars;
  sell=faFolderPlus;
  public sidebarShow: boolean = false;
-public items=[{ProductName:'',price:0,img:''}]
+public items=[{productName:'',price:0,img:''}]
   ngOnInit(): void {
     this.http.get<any>('http://localhost:4000/api/marketP').subscribe({
       next:Response=>{
         console.log( 'Response : ',Response)
         this.items=Response;
         console.log('items',this.items);
-        console.log(this.items[0]);  
+        console.log(this.items[0].productName); 
+       
+         
       },
       error:error=>{
         console.error(error)
