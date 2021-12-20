@@ -20,29 +20,25 @@ import { PostItemComponent } from './post-item/post-item.component';
 const routes: Routes = [
   {path: '' , component: FirstHomeComponent},
   {path: 'signup' , component: SignupComponent},
-  {path:'post' , component: PostListComponent},
   {path:'login'&&'signup/login', component:LoginComponent},
   {path:'post' , component: PostListComponent},
   {path:'s' , component: MarketComponent},
   {path:'cat' , component: CategoriesComponent},
+  {path: 'postItem',component : PostItemComponent}
   
 ]
 
 @NgModule({
   imports: [RouterModule.forRoot([
-
-    // {path: '' , component: FirstHomeComponent},
-    // {path:'posts',component:PostListComponent},
-    // {path : 'Market' , component: MarketComponent} ,
-    // {path:'signup' , component: SignupComponent},
-    //   {path:'categories' , component : CategoriesComponent}
     {path: '' , component: FirstHomeComponent},
     {path: 'signup' , component: SignupComponent},
     {path:'post' , component: PostListComponent},
     {path:'login'&&'signup/login', component:LoginComponent},
-    // {path:'post' , component: PostListComponent},
     {path:'s' , component: MarketComponent},
     {path:'cat' , component: CategoriesComponent},
+    {path: 'postItem',component : PostItemComponent}
+
+    
     ])],
     exports: [RouterModule]
   })

@@ -1,70 +1,79 @@
-<body>
+
   <div class="sidebar-opener" (click)="sidebarShow = !sidebarShow">
     <fa-icon [icon]="sidebarIcon"></fa-icon>
-</div>
- <!-- <fa-icon class="cartIcon" [icon]="shop"></fa-icon>   -->
-
-<div class="hovereffect"> 
-  <img src="https://www.rei.com/dam/camping-checklist-lg1.jpg" class="gadgets">
-  <div class="overlay">
-    <p> ALL YOU NEED AND MORE</p>
-    <div class='backHome' (click)='navHome()'><fa-icon [icon]="homeIcon"></fa-icon> </div>
   </div>
-</div>
+  <!-- <fa-icon class="cartIcon" [icon]="shop"></fa-icon>   -->
 
-<div class="sidebar-slider" [class.sidebar-slide-in]="sidebarShow">
-   <div
-       class="sidebar-close"
-       (click)="sidebarShow = !sidebarShow"
-   >
-       X
-   </div>
-     <div class="sidebar-content">
-       <div class="row">
-           <div class="col">
-            <mat-list class='sidebarList'>
-              <mat-list-item class='cat'><a href="#campsite"> Campsite </a></mat-list-item>
-              <hr>
-              <mat-list-item class='cat' ><a href="#gear">Repair Items </a> </mat-list-item>
-              <hr>
-              <mat-list-item class='cat'><a href="#clothing">Clothing</a>  </mat-list-item>
-              <hr>
-              <mat-list-item class='cat'><a href="#hygiene">hygiene</a> </mat-list-item>
-              <hr>
-              <mat-list-item class='cat'><a href="#kitchen">Kitchen</a></mat-list-item>
+  <div class="hovereffect">
+    <img
+      src="https://www.rei.com/dam/camping-checklist-lg1.jpg"
+      class="gadgets"
+    />
+    <div class="overlay">
+      <p>ALL YOU NEED AND MORE</p>
+      <div class="backHome" (click)="navHome()">
+        <fa-icon [icon]="homeIcon"></fa-icon>
+      </div>
+    </div>
+  </div>
 
-             </mat-list>
-             </div>
-           </div>
-     </div>
-</div>
-<div class='categoryN'>
-  <div id='campsite'>
-    <h3> <fa-icon [icon]="campsite"></fa-icon>   Campsite </h3>
-     <hr>
-     <p>hello there</p>
-   </div>
-  <div id='gear'>
-     <h3> <fa-icon [icon]="gear"></fa-icon> Tools and Repair Items</h3>
-      <hr>
+  <div class="sidebar-slider" [class.sidebar-slide-in]="sidebarShow">
+    <div class="sidebar-close" (click)="sidebarShow = !sidebarShow">X</div>
+    <div class="sidebar-content">
+      <div class="row">
+        <div class="col">
+          <mat-list class="sidebarList">
+            <mat-list-item class="cat"
+              >
+              <a href="cat/#clothing"> Campsite </a>
+              </mat-list-item
+            >
+            <hr />
+            <mat-list-item class="cat"
+              ><a href="#gear">Repair Items </a>
+            </mat-list-item>
+            <hr />
+            <mat-list-item class="cat"
+              ><a href="#clothing">Clothing</a>
+            </mat-list-item>
+            <hr />
+            <mat-list-item class="cat"
+              ><a href="#hygiene">hygiene</a>
+            </mat-list-item>
+            <hr />
+            <mat-list-item class="cat"
+              ><a href="#kitchen">Kitchen</a></mat-list-item
+            >
+          </mat-list>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div  id="categoryN">
+    <div id="campsite">
+      <h3><fa-icon [icon]="campsite"></fa-icon> Campsite</h3>
+      <hr />
       <p>hello there</p>
-   </div>
-  <div id='clothing'>
-   <h3> <fa-icon [icon]="clothing"></fa-icon>Clothing</h3>
-    <hr>
-    <p>hello there</p>
-   </div>
-  <div id='hygiene'>
-   <h3> <fa-icon [icon]="hygiene"></fa-icon>Health & Hygiene</h3>
-   <hr>
-   <p>hello there</p>
+    </div>
+    <div id="gear">
+      <h3><fa-icon [icon]="gear"></fa-icon> Tools and Repair Items</h3>
+      <hr />
+      <p>hello there</p>
+    </div>
+    <div id="clothing">
+      <h3><fa-icon [icon]="clothing"></fa-icon>Clothing</h3>
+      <hr />
+      <p>hello there</p>
+    </div>
+    <div id="hygiene">
+      <h3><fa-icon [icon]="hygiene"></fa-icon>Health & Hygiene</h3>
+      <hr />
+      <p>hello there</p>
+    </div>
+    <div id="kitchen">
+      <h3><fa-icon [icon]="kitchen"></fa-icon> Kitchen</h3>
+      <p>hello there</p>
+    </div>
   </div>
- <div id='kitchen'>
-  <h3> <fa-icon [icon]="kitchen"></fa-icon> Kitchen</h3>
-  <p>hello there</p>
- </div>
-</div> 
 
-
-</body>
- 

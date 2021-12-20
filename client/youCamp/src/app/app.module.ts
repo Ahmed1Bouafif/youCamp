@@ -17,9 +17,9 @@ import {PostListComponent} from './post-list/post-list.component'
 import {  FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from "@angular/material/form-field";
-// import { PostItemComponent } from './post-item/post-item.component';
 import { LoginComponent } from './login/login.component';
 import { PostItemComponent } from './post-item/post-item.component';
+import {SharedService} from './shared.service';
 
     
 //import { TestComponent } from './test/test.component';
@@ -38,7 +38,7 @@ import { PostItemComponent } from './post-item/post-item.component';
     TestComponent,
     // RouterOutlet
     PostItemComponent, 
-    CategoriesComponent
+    CategoriesComponent, 
   ],
   imports: [
     BrowserModule,
@@ -57,7 +57,7 @@ import { PostItemComponent } from './post-item/post-item.component';
     
     NgbModule
   ],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent],
 })
 export class AppModule { }

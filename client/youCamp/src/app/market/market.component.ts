@@ -2,6 +2,8 @@ import {faBars , faFolderPlus} from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';
 import { Component ,OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import {SharedService} from '../shared.service';
+
 @Component({
   selector: 'app-market' ,
   templateUrl: './market.component.html',
@@ -11,24 +13,25 @@ import { HttpClient } from '@angular/common/http';
 
 export class MarketComponent implements OnInit {
   
- constructor(private router: Router , private http:HttpClient){}
+ constructor(private router: Router , private http:HttpClient , private  _SharedService:SharedService){}
  sidebarIcon = faBars;
  sell=faFolderPlus;
  public sidebarShow: boolean = false;
-
+ 
  items: any = [];
   ngOnInit(): void {
-    this.http.get<any>('http://localhost:4000/api/marketP').subscribe({
-      next:Response=>{
-        console.log( 'Response : ',Response)
-        this.items=Response;
-        console.log('items :',this.items);
+    // this.http.get<any>('http://localhost:4000/api/marketP').subscribe({
+    //   next:Response=>{
+    //     console.log( 'Response : ',Response)
+    //     this.items=Response;
+    //     console.log('items :',this.items);
         
-      },
-      error:error=>{
-        console.error(error)
-      }
-    })
+    //   },
+    //   error:error=>{
+    //     console.error(error)
+    //   }
+    //})
+    this._SharedService.getItems()
   }
   navigateR() {
     this.router.navigateByUrl('/cat');

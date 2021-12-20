@@ -7,7 +7,7 @@ import {faTools} from '@fortawesome/free-solid-svg-icons';
 import {faMitten} from '@fortawesome/free-solid-svg-icons';
 import {faPumpSoap} from '@fortawesome/free-solid-svg-icons';
 import {faFire, faCartPlus} from '@fortawesome/free-solid-svg-icons';
-
+import { HttpClient } from '@angular/common/http';
 
 
 
@@ -28,11 +28,13 @@ export class CategoriesComponent implements OnInit {
  hygiene=faPumpSoap;
  kitchen=faFire;
  shop=faCartPlus;
-  constructor(private router: Router) { }
+  constructor(private router: Router ,private http:HttpClient) { }
   sidebarIcon = faBars;
  public sidebarShow: boolean = false;
 
   ngOnInit(): void {
+   
+  
   }
   navHome(){
     this.router.navigateByUrl('s');
