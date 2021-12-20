@@ -25,6 +25,7 @@ export class PostItemComponent implements OnInit {
     
   }
   public get Item():Item{
+  console.log('get :');
     return this.item;
 }
   onchangeN(event:any){
@@ -70,6 +71,8 @@ export class PostItemComponent implements OnInit {
   //   error:error=>{
   //     console.error(error)
   //   }})
+  
+  
 
   
   navHome(){

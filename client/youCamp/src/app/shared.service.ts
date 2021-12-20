@@ -12,7 +12,6 @@ export class SharedService {
   getItems(): Item[] {
     console.log('working here');
     console.log(this.items);
-    
     return this.items;
     
     

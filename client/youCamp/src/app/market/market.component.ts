@@ -2,7 +2,8 @@ import {faBars , faFolderPlus} from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';
 import { Component ,OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {SharedService} from '../shared.service';
+//  import {SharedService} from '../shared.service';
+//  import {PostItemComponent} from '../post-item/post-item.component'
 
 @Component({
   selector: 'app-market' ,
@@ -12,31 +13,30 @@ import {SharedService} from '../shared.service';
 })
 
 export class MarketComponent implements OnInit {
-  
- constructor(private router: Router , private http:HttpClient , private  _SharedService:SharedService){}
+  ProductName: string='' ;
+  img:string='' ;
+  price:number=0;
+ constructor(private router: Router , private http:HttpClient  ){}
  sidebarIcon = faBars;
  sell=faFolderPlus;
  public sidebarShow: boolean = false;
- items=[];
-
+public items=[{ProductName:'',price:0,img:''}]
   ngOnInit(): void {
     this.http.get<any>('http://localhost:4000/api/marketP').subscribe({
       next:Response=>{
         console.log( 'Response : ',Response)
         this.items=Response;
         console.log('items',this.items);
-        // console.log(this.items[0].price);
-        
-        
+        console.log(this.items[0]);  
       },
       error:error=>{
         console.error(error)
       }
     })
-    
+   
 
-  }
-  navigateR() {
+}
+   navigateR() {
     this.router.navigateByUrl('/cat');
   }
   navigate() {

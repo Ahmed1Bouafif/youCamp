@@ -135,7 +135,6 @@
     position: absolute;
     -webkit-transition: all 0.35s;
     transition: all 0.35s;
-    
     height: 90%;
     width: 95%;
     margin-left: 1%;
@@ -162,4 +161,8 @@
     filter: alpha(opacity=100);
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
+  }
+  .card-group{
+    
+    margin:auto;
   }
