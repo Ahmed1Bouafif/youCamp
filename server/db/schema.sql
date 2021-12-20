@@ -13,6 +13,7 @@ CREATE TABLE users (
   firstName varchar(255),
   Adress varchar (255),
   phoneNumber varchar(255),
+  imgUrl varchar(255) default ('https://st2.depositphotos.com/5682790/10456/v/600/depositphotos_104564156-stock-illustration-male-user-icon.jpg') ,
   password varchar(255),
   PRIMARY KEY (userId)
 );
@@ -20,32 +21,49 @@ CREATE TABLE users (
 
 
 
-CREATE TABLE sellproducts (
+CREATE TABLE products (
   productId int NOT NULL AUTO_INCREMENT ,
   productName varchar(255),
   price int ,
   img varchar(255),
-  buyer varchar(255),
-  owner int(8),
-  FOREIGN KEY (owner) REFERENCES users(userId),
+  buyerId int ,
+  ownerId int(8),
+  createdAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  FOREIGN KEY (ownerId) REFERENCES users(userId),
+  FOREIGN KEY (buyerId) REFERENCES users(userId),
   PRIMARY KEY (productId)
 );
+
+
 CREATE TABLE posts (
   postId int NOT NULL AUTO_INCREMENT ,
   content varchar(255),
   imgUrl varchar(255),
-  owner int(8),
-  FOREIGN KEY (owner) REFERENCES users(userId),
-  PRIMARY KEY (postId)
+  createdAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  ownerId int(8),
+  PRIMARY KEY (postId),
+      CONSTRAINT ownerId
+    FOREIGN KEY (ownerId)
+    REFERENCES users (userId)
+    ON DELETE CASCADE
 );
 CREATE TABLE comments (
   commentId int NOT NULL AUTO_INCREMENT ,
   content varchar(50),
-  user int(8),
-  post int ,
-  FOREIGN KEY (user) REFERENCES users(userId),
-  FOREIGN KEY (post) REFERENCES posts(postId),
-  PRIMARY KEY (commentId)
+  commenter int(8),
+  postId int ,
+  createdAt DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+
+ 
+  PRIMARY KEY (commentId),
+        CONSTRAINT commenter
+    FOREIGN KEY (commenter)
+    REFERENCES users(userId)
+    ON DELETE CASCADE,
+          CONSTRAINT postId
+    FOREIGN KEY (postId)
+    REFERENCES posts (postId)
+    ON DELETE CASCADE
 );
 
 
