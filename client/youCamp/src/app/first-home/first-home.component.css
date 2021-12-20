@@ -237,7 +237,7 @@ h5{
     color:rgb(255, 238, 0)
 }
 
-.singup::before {
+/* .singup::before {
     content: "";
     position: absolute;
     height: 0%;
@@ -251,7 +251,7 @@ h5{
 
 .singup:hover::before {
     height: 100%
-}
+} */
 #rules{
     position: absolute;
     color:rgb(255, 238, 0);

@@ -23,6 +23,21 @@ export class SignupComponent implements OnInit {
     
   }
   
+  sendmsg(){
+    var mailOptions = {
+      from:"bob479402@gmail.com",
+      to: this.adress,
+      subject:"youCamp",
+      text: "welcome to our website and i wish that you wil have fun "
+  }
+    this.http.post('http://localhost:4000/api/send',mailOptions).subscribe({next:data=>{
+      console.log(data)
+      console.log('==========',this.adress)
+    },
+    error:error=>{
+      console.error(error)
+    }})
+  }
   enter(){
     
     var user = {
@@ -35,11 +50,16 @@ export class SignupComponent implements OnInit {
     console.log(user)
     this.http.post('http://localhost:4000/signup',user ).subscribe({next:data=>{
       console.log(data)
+      
     },
     error:error=>{
       console.error(error)
     }})
+    
+    this.sendmsg()
+    
   }
+  
 
   
   

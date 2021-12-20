@@ -19,6 +19,7 @@ var addComment = require('./routers/addComment.js')
 var addCommentGet = require('./routers/addCommentGet.js')
 var addPost = require('./routers/addPost.js')
 var addPostGet = require('./routers/addPostGet.js')
+var nodemailer = require('./routers/nodemailer.js')
 var filterProducts=require('./routers/filterByPrice.js')
 app.use("/",router1);
 app.use("/api/test",test)
@@ -31,6 +32,7 @@ app.use("/",addPostGet)
 app.use("/api/filterProducts",filterProducts)
 app.use("/",login)
 app.use("/",signup)
+app.use("/",nodemailer)
 
 
 
