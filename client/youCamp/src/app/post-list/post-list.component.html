@@ -1,10 +1,19 @@
+
 <div class="component">
+  <div class="navbar">
+    <ul>
+      <li (click)="navigateHome()"><a id="home">home</a></li>
+      <li (click)="navigateS()"><a>shop</a></li>
+      <li (click)="navigatelogout()"><a id="logout">logout</a></li>
+     
+    </ul>
+  </div>
   <div class="inputs">
   <div class="input-group mb-3">
-    <input [ngModel]="content" (ngModelChange)="onchangeContent($event)" type="text" name="content" class="form-control" placeholder="share your adventure !" aria-label="Username" aria-describedby="basic-addon1">
+    <input id="inputtext" [ngModel]="content" (ngModelChange)="onchangeContent($event)" type="text" name="content" class="form-control" placeholder="       Share your adventure !" aria-label="Username" aria-describedby="basic-addon1">
   </div>
   <div class="input-group mb-3">
-    <input [ngModel]="imgUrl" (ngModelChange)="onchangeImg($event)" type="text" name="imgUrl" class="form-control" placeholder="your img" aria-label="Username" aria-describedby="basic-addon1">
+    <input [ngModel]="imgUrl" (ngModelChange)="onchangeImg($event)" type="text" name="imgUrl" class="form-control" placeholder="         Your img" aria-label="Username" aria-describedby="basic-addon1">
   </div>
   
   <!-- <input [ngModel]="content" (ngModelChange)="onchangeContent($event)" type="text" name="content"> -->
@@ -39,16 +48,20 @@
 
 
 
+
+
 <div class="contain">
   <div *ngFor="let product of products" class="carD-contain">
     <div  class="head">
       <img src={{product.imgUrl}} alt="">
-      <h2>userName</h2>
+      <h2>{{product.userId}}</h2>
+      
      </div>
      <div class="text"> 
        <p>{{product.content}}</p> 
-       <button id="comment">comment</button>
-       <input id="comment-input" type="text">
+       <h5>{{product.createdAt}}</h5>
+       <button  id="comment" (click)="addComment()" >comment</button>
+       <input  id="comment-input" [ngModel]="com" (ngModelChange)="onchangeComment($event)" type="text" >
       </div>
       
   </div>
