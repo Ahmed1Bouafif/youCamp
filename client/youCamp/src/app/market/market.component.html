@@ -30,16 +30,22 @@
 </div>
 <ul class='items'>
   <li *ngFor="let item of items" class="card-group" >
-   <div  class="card" >
-    <img src={{item.img}} class="card-img-top" >
-    <div class="card-body">
-      <h5 class="card-title">{{item.ProductName}}</h5>
-      <p class="card-text"><small>{{item.price}}</small></p>
+    <div>
+     <span><h3>{{item.ProductName}}</h3></span>
+      <img src={{item.img}}  class='image'>
+     <span><small class="text-muted">{{item.price}}</small></span>
+
     </div>
-  </div>  
+   
 </li>
 </ul>
-
+<!-- <div  class="card" >
+  <img src={{item.img}} class="card-img-top" >
+  <div class="card-body">
+    <h5 class="card-title">{{item.ProductName}}</h5>
+    <p class="card-text"><small>{{item.price}}</small></p>
+  </div>
+</div>   -->
 
 
 
