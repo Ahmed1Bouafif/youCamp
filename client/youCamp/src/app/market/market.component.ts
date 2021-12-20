@@ -1,4 +1,4 @@
-import {faBars , faFolderPlus} from '@fortawesome/free-solid-svg-icons';
+import {faBars , faFolderPlus ,faCommentAlt} from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';
 import { Component ,OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -19,8 +19,25 @@ export class MarketComponent implements OnInit {
  constructor(private router: Router , private http:HttpClient  ){}
  sidebarIcon = faBars;
  sell=faFolderPlus;
+ blogsfeed=faCommentAlt;
  public sidebarShow: boolean = false;
 public items=[{productName:'',price:0,img:''}]
+
+  ngOnInit(): void {
+    this.http.get<any>('http://localhost:4000/api/marketP').subscribe({
+      next:Response=>{
+        console.log( 'Response : ',Response)
+        this.items=Response;
+        console.log('items',this.items);
+        console.log(this.items[0].productName); 
+       
+         
+      },
+      error:error=>{
+        console.error(error)
+      }
+    }) 
+}
 filter(){
   this.http.get<any>('http://localhost:4000/api/filterProducts').subscribe({
     next:Response => {
@@ -35,28 +52,15 @@ filter(){
       
     });
   }
-  ngOnInit(): void {
-    this.http.get<any>('http://localhost:4000/api/marketP').subscribe({
-      next:Response=>{
-        console.log( 'Response : ',Response)
-        this.items=Response;
-        console.log('items',this.items);
-        console.log(this.items[0].productName); 
-       
-         
-      },
-      error:error=>{
-        console.error(error)
-      }
-    })
-   
-
-}
    navigateR() {
     this.router.navigateByUrl('/cat');
   }
   navigate() {
     this.router.navigateByUrl('/postItem');
+  }
+  blogs(){
+    this.router.navigateByUrl('/post');
+
   }
   
   }
