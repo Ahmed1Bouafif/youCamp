@@ -43,10 +43,10 @@ export class PostItemComponent implements OnInit {
         price:this.item.price,
         img:this.item.img
     };
-   this._SharedService.addItem(currentItem);
     console.log('currentItem : ',currentItem);
     this.http.post('http://localhost:4000/api/addproduct',currentItem ).subscribe({
       next:data=>{
+        this._SharedService.addItem(currentItem);
       console.log('here :',data);
       console.log('items from shared service',this._SharedService.items);
        

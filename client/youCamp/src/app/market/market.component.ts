@@ -17,21 +17,24 @@ export class MarketComponent implements OnInit {
  sidebarIcon = faBars;
  sell=faFolderPlus;
  public sidebarShow: boolean = false;
- 
- items: any = [];
+ items=[];
+
   ngOnInit(): void {
-    // this.http.get<any>('http://localhost:4000/api/marketP').subscribe({
-    //   next:Response=>{
-    //     console.log( 'Response : ',Response)
-    //     this.items=Response;
-    //     console.log('items :',this.items);
+    this.http.get<any>('http://localhost:4000/api/marketP').subscribe({
+      next:Response=>{
+        console.log( 'Response : ',Response)
+        this.items=Response;
+        console.log('items',this.items);
+        // console.log(this.items[0].price);
         
-    //   },
-    //   error:error=>{
-    //     console.error(error)
-    //   }
-    //})
-    this._SharedService.getItems()
+        
+      },
+      error:error=>{
+        console.error(error)
+      }
+    })
+    
+
   }
   navigateR() {
     this.router.navigateByUrl('/cat');
