@@ -4,22 +4,22 @@
       <div>
         <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Product Name</mat-label>
-            <textarea matInput  (ngModelChange)='onchangeN($event)'></textarea>
+            <textarea matInput [ngModel]="item.name"  (ngModelChange)='onchangeN($event)' name='item.name'></textarea>
           </mat-form-field>  
         </div>
         <div>
           <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Picture Of Your Product</mat-label>
-            <textarea matInput placeholder="leave a url of product picture" type='url' (ngModelChange)='onchangeP($event)'></textarea>
+            <textarea matInput placeholder="leave a url of product picture" [ngModel]="item.img" type='url' (ngModelChange)='onchange($event)' name='item.img'></textarea>
           </mat-form-field>  
         </div>
         <div>
           <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Description</mat-label>
-            <textarea matInput placeholder=" a little description"  (ngModelChange)='onchangeD($event)'></textarea>
+            <mat-label>Price</mat-label>
+            <textarea matInput [ngModel]="item.price" (ngModelChange)='onchangeP($event)' name='item.price'></textarea>
           </mat-form-field> 
         </div> 
-          <button type="button" class="btn btn-primary" id='btn'  (click)="post()">Post</button>
+          <button type="button" class="btn btn-primary" id='btn'  (click)="addItem()">Post</button>
     </form>
  
     <img src="http://cdn2.atlantamagazine.com/wp-content/uploads/sites/12/2014/10/1014_hikesgear_kburdg_oneuseonly.jpg" id="bg" >
