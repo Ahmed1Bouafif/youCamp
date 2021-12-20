@@ -21,6 +21,20 @@ export class MarketComponent implements OnInit {
  sell=faFolderPlus;
  public sidebarShow: boolean = false;
 public items=[{productName:'',price:0,img:''}]
+filter(){
+  this.http.get<any>('http://localhost:4000/api/filterProducts').subscribe({
+    next:Response => {
+      console.log('works')
+      console.log(Response)
+      this.items=Response;
+
+    },
+      error:error=>{
+        console.error(error)
+      }
+      
+    });
+  }
   ngOnInit(): void {
     this.http.get<any>('http://localhost:4000/api/marketP').subscribe({
       next:Response=>{
@@ -44,16 +58,6 @@ public items=[{productName:'',price:0,img:''}]
   navigate() {
     this.router.navigateByUrl('/postItem');
   }
-  filter(){
-    // this.http.get<any>('http://localhost:4000/api/filterProducts').subscribe({
-    //   next:Response => {
-    //     console.log(Response)
-    //   },
-    //     error:error=>{
-    //       console.error(error)
-    //     }
-        
-    //   })
-    }
+  
   }
 

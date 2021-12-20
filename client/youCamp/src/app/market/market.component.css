@@ -162,3 +162,11 @@
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
   }
+.card-group{ margin-top: 10%;
+  margin-left: 5%;
+display: inline-block;
+}
+.card-group img{
+  margin-top: 2%;
+  width: 80%;
+}
